@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <html lang="en">
   <head>
     <title>WebDev Studio</title>
@@ -10,17 +13,52 @@
 
   <!-- page content goes into <body> -->
   <body>
-    <div id="cs1300-gallery">
-      <h1>Welcome to my bakery</h1>
-      <p>Add your own images and styles!</p>
 
+    <div id="header">
+      <h1>Welcome to the Pizzeria</h1>
+      <p>We sincerely apologize for any inconvenience our menu items might cause!</p>  
+    </div>
+
+    <div id="cs1300-gallery">
+
+      
+  
       <!-- TODO: PART I Add your own images and use CSS flex to make sure they work on different screen sizes -->
       <div class="gallery-container">
-        <img class="gallery-item" src="./assets/jeff.jpg" alt="jeff watching u">
+        <img class="gallery-item" src="./assets/americanpizza.png" alt="jeff watching u">
+      </div>
+
+      <div class="gallery-container">
+        <img class="gallery-item" src="./assets/bostonpizza.png" alt="jeff watching u">
+      </div>
+
+      <div class="gallery-container">
+        <img class="gallery-item" src="./assets/burntpizza.jpeg" alt="jeff watching u">
+      </div>
+
+      <div class="gallery-container">
+        <img class="gallery-item" src="./assets/minimalist pizza.png" alt="jeff watching u">
+      </div>
+
+      <div class="gallery-container">
+        <img class="gallery-item" src="./assets/pizzahybrid.jpg" alt="jeff watching u">
+      </div>
+
+      <div class="gallery-container">
+        <img class="gallery-item" src="./assets/veganpizza.webp" alt="jeff watching u">
       </div>
 
       <!-- TODO: PART II Uncomment the line below, and hook up this button to display data from an API -->
-      <!-- <button onclick="updatePage()">Press this button to display some fruit data</button> -->
+      
+    </div>
+    <div id="fruit-section">
+      <div id="button-container">
+        <button id="fruit-button" onclick="updatePage()">Press this button to display some fruit data</button>
+      </div>
+      <div id="list-container">
+    </div>
+ 
+
     </div>
   </body>
 

@@ -31,9 +31,41 @@ const updatePage = async () => {
   // TODO: Use either `map` and/or `filter` to extract some data from the array of fruit objects
   // For example, find "name of all fruits whose sugar > 15",
 
+  const filteredFruitsArray = fruitsArray.filter((item) => {
+    return item.nutritions.calories > 50;
+   })
+
+  // console.log(filteredFruitsArray);
+  listFillingFruits(filteredFruitsArray);
+    
+
   // TODO: Create a new HTML element to display your data
 
   // TODO: Append your new element to the page
+
+}
+
+const listFillingFruits = (filteredFruitsArray) => {
+  
+  let pairArray = [];
+  filteredFruitsArray.forEach(item => {
+    pairArray[item.name] = item.nutritions.calories;
+  });
+
+  console.log(pairArray); 
+
+  let fruitsText = "The following fruits have more than 50 calories and are healthier than our pizza offerings: ";
+  
+  filteredFruitsArray.forEach(item => {
+    fruitsText = fruitsText.concat(" ", item.name, " with ", item.nutritions.calories, " calories,");
+    console.log(fruitsText);
+  });
+
+  const fillingFruits = document.createElement('div');
+  fillingFruits.innerHTML = fruitsText;
+
+  const existingElement = document.getElementById('list-container');
+  existingElement.innerHTML = fruitsText;
 
 }
 
